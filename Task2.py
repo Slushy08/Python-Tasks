@@ -1,9 +1,14 @@
-user_input = input("enter your word: ")
+# empty variable to store values
+total = []
 
-total = 0
+# condition is infinitely true
+while True:
 
-for char in user_input:
-    if char == "a":
-        total += 1
+    # asks the user for a number, which is later added to the array
+    user_num = int(input("Enter a number (0 to stop): "))
+    total.append(user_num)
 
-print(f"yo twin the letter a appears {total} times")
+    # when the user inputs 0, it stops the loop and prints out the sum of the array
+    if user_num == 0:
+        print(sum(total))
+        break
